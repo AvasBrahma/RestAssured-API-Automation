@@ -1,0 +1,26 @@
+# Ignore target directory (Maven build output)
+target/
+test-output/
+
+# Ignore IntelliJ IDEA project files (if used)
+*.iml
+.idea/
+
+# Eclipse specific settings
+.classpath
+.project
+.settings/
+
+# OS-specific files
+.DS_Store  # macOS
+Thumbs.db  # Windows
+
+# Logs
+*.log
+
+# Maven-specific
+.mvn/timing.properties
+.mvn/wrapper/maven-wrapper.jar
+
+# Ignore compiled classes
+*.class
