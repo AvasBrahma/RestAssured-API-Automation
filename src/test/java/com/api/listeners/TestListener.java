@@ -1,7 +1,7 @@
-package com.api.listerners;
+package com.api.listeners;
 
-import org.apache.log4j.LogManager;
-import org.apache.log4j.Logger;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import org.testng.ITestContext;
 import org.testng.ITestListener;
 import org.testng.ITestResult;
@@ -9,6 +9,10 @@ import org.testng.ITestResult;
 public class TestListener implements ITestListener{
 	
 	private static final Logger logger=LogManager.getLogger(TestListener.class);
+	
+	public TestListener() {
+        // No-arg constructor
+    }
 	
 	public void onStart(ITestContext context) {
 		logger.info("Test Suite Started....!!!!!!!!!");
@@ -35,18 +39,17 @@ public class TestListener implements ITestListener{
 		logger.info("Skipped!!" +result.getMethod().getMethodName());
 		
 	}
-	
-	
 
 	public void onFinish(ITestContext context) {
 		// TODO Auto-generated method stub
 		logger.info("Test Suite Completed....!!!!!!!!!");
 		
 	}
+	
+	 public void onTestFailedButWithinSuccessPercentage(ITestResult result) {
+		 logger.info("Description!!"+ result.getMethod().getDescription());
+		 
+	 }
 
-	public void onTestFailedButWithinSuccessPercentage(ITestResult result) {
-		// TODO Auto-generated method stub
-		
-	}
 
 }

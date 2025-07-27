@@ -10,17 +10,19 @@ import com.api.models.response.DoctorRegisterResponse;
 
 import io.restassured.response.Response;
 
-@Listeners(com.api.listerners.TestListener.class)
+
+
+@Listeners(com.api.listeners.TestListener.class)
 public class DoctorTest {
 	
 
      @Test(description="Validate doctor able to register or not")
      public void testRegister() {
     	 
-    	 DoctorRegisterReq docReq=new DoctorRegisterReq("DDTD", "DDTD ", "AB123");
+    	 DoctorRegisterReq docReq=new DoctorRegisterReq("DD1 DD", "DD1 DD", "AB123");
     	 DoctorService docService=new DoctorService();
     	 Response res=docService.register(docReq);
-    	 System.out.println(res.asPrettyString()); 
+    	// System.out.println(res.asPrettyString()); 
     	 DoctorRegisterResponse docRegisRes= res.as(DoctorRegisterResponse.class); // return DoctorRegisterResponse object
     	 System.out.println("isRegister : "+ docRegisRes.isRegistered());
     	 Assert.assertTrue(docRegisRes.isRegistered()==true);

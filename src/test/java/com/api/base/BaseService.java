@@ -4,6 +4,9 @@ import static io.restassured.RestAssured.*;
 
 import java.util.Map;
 
+import com.api.filters.LoggingFilters;
+
+import io.restassured.RestAssured;
 import io.restassured.http.ContentType;
 import io.restassured.response.Response;
 import io.restassured.specification.RequestSpecification;
@@ -13,6 +16,10 @@ public class BaseService {
 	//BaseURI
 	private static final String BASE_URL="http://localhost:3000";
 	private RequestSpecification requestSpecification;
+	
+	static {
+		RestAssured.filters(new LoggingFilters());
+	}
 	
 	public BaseService() {
 		requestSpecification=given().baseUri(BASE_URL);

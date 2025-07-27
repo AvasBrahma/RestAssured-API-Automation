@@ -2,9 +2,9 @@ package com.api.models.response;
 
 public class DoctorData {
 	
+	 private String fullname;
 	 private String username;
      private String password;
-     private String name;
      private String _id;
      private int __v;
 
@@ -15,16 +15,16 @@ public class DoctorData {
 
      @Override
 	public String toString() {
-		return "DoctorData [username=" + username + ", password=" + password + ", name=" + name + ", _id=" + _id
+		return "DoctorData [fullname=" + fullname + ",username=" + username + ", password=" + password + ", _id=" + _id
 				+ ", __v=" + __v + "]";
 	}
     public DoctorData() {}
      
-	public DoctorData(String username, String password, String name, String _id, int __v) {
+	public DoctorData(String fullname, String username, String password, String _id, int __v) {
 		super();
 		this.username = username;
 		this.password = password;
-		this.name = name;
+		this.fullname = fullname;
 		this._id = _id;
 		this.__v = __v;
 	}
@@ -41,12 +41,12 @@ public class DoctorData {
          this.password = password;
      }
 
-     public String getName() {
-         return name;
+     public String getFullname() {
+         return fullname;
      }
 
-     public void setName(String name) {
-         this.name = name;
+     public void setFullname(String fullname) {
+         this.fullname = fullname;
      }
 
      public String get_id() {
