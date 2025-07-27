@@ -2,16 +2,16 @@
 <testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2025-07-26T15:03:06Z" name="Default suite" finished-at="2025-07-26T15:03:09Z" duration-ms="2421">
+  <suite started-at="2025-07-26T20:49:53Z" name="Default suite" finished-at="2025-07-26T20:49:55Z" duration-ms="2397">
     <groups>
     </groups>
-    <test started-at="2025-07-26T15:03:06Z" name="Default test" finished-at="2025-07-26T15:03:09Z" duration-ms="2421">
-      <class name="login.api.test.DoctorTest">
-        <test-method signature="testRegister()[pri:0, instance:login.api.test.DoctorTest@20435c40]" started-at="2025-07-26T15:03:06Z" name="testRegister" description="Validate doctor able to register or not" finished-at="2025-07-26T15:03:09Z" duration-ms="2404" status="PASS">
+    <test started-at="2025-07-26T20:49:53Z" name="Default test" finished-at="2025-07-26T20:49:55Z" duration-ms="2397">
+      <class name="login.api.test.PatientTest">
+        <test-method signature="register()[pri:0, instance:login.api.test.PatientTest@225129c]" started-at="2025-07-26T20:49:53Z" name="register" description="Verify Patient is able to register or not" finished-at="2025-07-26T20:49:55Z" duration-ms="2378" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- testRegister -->
-      </class> <!-- login.api.test.DoctorTest -->
+        </test-method> <!-- register -->
+      </class> <!-- login.api.test.PatientTest -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

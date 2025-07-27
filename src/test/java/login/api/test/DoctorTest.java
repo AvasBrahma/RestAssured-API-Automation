@@ -1,6 +1,7 @@
 package login.api.test;
 
 import org.testng.Assert;
+import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
 
 import com.api.base.DoctorService;
@@ -9,6 +10,7 @@ import com.api.models.response.DoctorRegisterResponse;
 
 import io.restassured.response.Response;
 
+@Listeners(com.api.listerners.TestListener.class)
 public class DoctorTest {
 	
 
