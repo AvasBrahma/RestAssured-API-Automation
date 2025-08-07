@@ -34,7 +34,7 @@ public class DoctorTest {
      @Test(description="Validate if doctor is already register")
      public void testAlreadyRegister() {
     	 
-    	 DoctorRegisterReq docReq=new DoctorRegisterReq("DD1 DD", "DD1 DD", "AB123");
+    	 DoctorRegisterReq docReq=new DoctorRegisterReq("DD79", "DD79", "AB123");
     	 DoctorService docService=new DoctorService();
     	 Response res=docService.register(docReq);
     	 System.out.println(res.asPrettyString());
@@ -45,7 +45,8 @@ public class DoctorTest {
     	 JsonPath jsonPath=res.jsonPath();
     	 System.out.println("Registered :"+jsonPath.getBoolean("isRegistered"));
     	 System.out.println("message :"+jsonPath.getString("message"));
-    	 JsonValidator.validateJsonResponse(res.getBody().asString(), "isRegistered", "false");
+    	 JsonValidator.validateJsonResponse(res.getBody().asString(), "isRegistered", "true");
+    	 JsonValidator.validateJsonResponseUsingJSONPath(res.getBody().asString(), "data.fullname", "DD79");
     	 
 
      }
